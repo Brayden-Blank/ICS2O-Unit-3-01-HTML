@@ -5,20 +5,17 @@
 // This file contains the JS functions for index.html
 
 /**
- * This function gets users hours worked and hourly wage to calculate how much is earned
+ * This function gets the users input and calculates the area of a trapezoid
  */
 function calculateClicked() {
   //input
-  const hoursWorked = parseInt(document.getElementById("hours").value)
-  const wages = parseInt(document.getElementById("wage").value)
+  const aBase = parseInt(document.getElementById("a-base").value)
+  const bBase = parseInt(document.getElementById("b-base").value)
+  const height = parseInt(document.getElementById("height").value)
 
   //process
-  const pay = (hoursWorked * wages) * (1 - 0.18)
-  const taxes = (hoursWorked * wages * 0.18)
+  const area = ((aBase + bBase) / 2) * height
   
   //output
-  document.getElementById("money-earned").innerHTML = 
-    "<p>Your pay will be: $ " +  pay.toFixed(2) + "!</p>"
-  document.getElementById("taxes").innerHTML =
-    "<p>The government will take: $" + taxes.toFixed(2) + ".</p>"
+  document.getElementById("area-of-trapezoid").innerHTML = "<p>The area of the trapezoid is: " +  area + " mm²!</p>"
 }
